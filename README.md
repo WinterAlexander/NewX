@@ -33,14 +33,17 @@ you draw me a monster or a car, I will be happy to add it to the game.
 Current sprites of the game are completely random. Some have been taken
 from google, others have been draw from friends I even made some by 
 myself. <b>IF ANY RESOURCE USED BY MY GAME IS VIOLATING YOUR COPYRIGHTS, 
-PLEASE CONTACT ME AND I'LL REMOVE THE ILLEGAL MATERIAL IMMEDIATLY.</b>
+PLEASE CONTACT ME AND I'LL REMOVE THE ILLEGAL MATERIAL AS SOON AS POSSIBLE.</b>
 
 Some links:
 
 Atramento 0.2.1: https://dl.dropboxusercontent.com/u/65019675/Atramento%200.2.1.jar
+
 Atramento 0.2: https://dl.dropboxusercontent.com/u/65019675/Atramento%200.2.jar
+
 Coureur des Prairies: https://dl.dropboxusercontent.com/u/65019675/Coureur%20des%20Prairies.jar
+
 Coureur des Prairies Gameplay video: https://www.youtube.com/watch?v=oB-J-SdRUlQ
 
-Please do not spam download my game because dropbox will be angry at me :(
+Please do not spam download my game else dropbox will be angry at me :(
 Thanks for reading, have a good day !
