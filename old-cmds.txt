@@ -1,0 +1,230 @@
+if(args[0].equalsIgnoreCase("setcursor"))
+			{
+				Log.info("Executing setcursor command");
+				try
+				{
+					this.getState().getGui().getPin().setX(Double.parseDouble(args[1]));
+					this.getState().getGui().getPin().setY(Double.parseDouble(args[2]));
+				}
+				catch(Exception e)
+				{
+					Log.info("USAGE: setcursor x y");
+				}
+			}
+			else if(args[0].equalsIgnoreCase("tp"))
+			{
+				Log.info("Executing tp command");
+				try
+				{
+					double x = Double.parseDouble(args[1]);
+					double y = Double.parseDouble(args[2]);
+				
+					this.getState().getPlayer().setLocation(new Location(x, y, this.getState().getPlayer().getLocation().getDirection()));
+				}
+				catch(Exception e)
+				{
+					Log.info("USAGE: tp x y");
+				}
+				
+			}
+			else if(args[0].equalsIgnoreCase("tasks"))
+			{
+				getState().getScheduler().debug();
+			}
+			else if(args[0].equalsIgnoreCase("fps"))
+			{
+				System.out.println(this.getState().getGame().getContainer().getFPS());
+			}
+			else if(args[0].equalsIgnoreCase("save"))
+			{
+				Log.info("Executing save command");
+				try
+				{
+					FileLevel level = new FileLevel(new File(getState().getGame().getDataFolder(), args[1] + ".level"), args[1], this.getState().getMusic(), this.getState().getLevel().getPlayerSpawn(), this.getState().getWorld());
+					level.save();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+					Log.info("USAGE: save level_name");
+				}
+				
+			}
+			else if(args[0].equalsIgnoreCase("newworld"))
+			{
+				Log.info("Executing newworld command");
+				try
+				{
+					this.getState().load(new ExampleLevel());
+				}
+				catch(Exception e)
+				{
+					Log.info("USAGE: newworld");
+				}
+
+			}
+			else if(args[0].equalsIgnoreCase("load"))
+			{
+				Log.info("Executing load command");
+				try
+				{
+					FileLevel level = new FileLevel(new File(getState().getGame().getDataFolder(), args[1] + ".level"));
+					level.load();
+					this.getState().load(level);
+				}
+				catch(Exception e)
+				{
+					Log.info("USAGE: load level_name");
+				}
+			}
+			else if(args[0].equalsIgnoreCase("setmusic"))
+			{
+				Log.info("Executing setmusic command");
+				try
+				{
+					if(this.getState().getMusic() != null)
+						this.getState().getMusic().stop();
+					this.getState().setMusic(SoundList.valueOf(args[1].toUpperCase()));
+					this.getState().getMusic().play();
+				}
+				catch(Exception e)
+				{
+					Log.info("USAGE: setmusic music_name");
+					Log.info("Sound list:");
+					for(SoundList sound : SoundList.values())
+						Log.info(sound.name());
+				}
+			}
+			else if(args[0].equalsIgnoreCase("setspawn"))
+			{
+				Log.info("Executing setspawn command");
+				try
+				{
+					this.getState().getLevel().setPlayerSpawn(this.getState().getPlayer().getLocation());
+				}
+				catch(Exception e)
+				{
+					Log.info("USAGE: setspawn //at your player position");
+				}
+			}
+			else if(args[0].equalsIgnoreCase("setbackground"))
+			{
+				Log.info("Executing setbackground command");
+				try
+				{
+					this.getState().getWorld().setBackground(new Background(this.getState().getWorld(), ImageList.valueOf("ADVENTURE_BG_" + args[1].toUpperCase()).ordinal()));
+				}
+				catch(Exception e)
+				{
+					Log.info("USAGE: setbackground background_name");
+				}
+			}
+			else if(args[0].equalsIgnoreCase("setborder"))
+			{
+				Log.info("Executing setborder command");
+				try
+				{
+					this.getState().getWorld().setBorder(new RectangleWorldBorder(this.getState().getWorld(), Double.parseDouble(args[2]), Double.parseDouble(args[3]), Double.parseDouble(args[4]), Double.parseDouble(args[5])));
+				}
+				catch(Exception e)
+				{
+					Log.info("USAGE: setborder x y width height");
+				}
+			}
+			else if(args[0].equalsIgnoreCase("setgravity"))
+			{
+				Log.info("Executing setgravity command");
+				try
+				{
+					this.getState().getWorld().setGravity(new WorldGravity(this.getState().getWorld(), Double.parseDouble(args[1])));
+				}
+				catch(Exception e)
+				{
+					Log.info("USAGE: setgravity gravitationnal_const");
+				}
+			}
+			else if(args[0].equalsIgnoreCase("setcamera"))
+			{
+				Log.info("Executing setcamera command");
+				try
+				{
+					this.getState().setCamera(new Camera(this.getState().getWorld(), Double.parseDouble(args[1]), Double.parseDouble(args[2]), this.getState().getDrawer().getCamera().getCenterX(), this.getState().getDrawer().getCamera().getCenterY(), Double.parseDouble(args[3]), Double.parseDouble(args[4]), Double.parseDouble(args[5]), Double.parseDouble(args[6])));
+				}
+				catch(Exception e)
+				{ 
+					Log.info("USAGE: setcamera minZoom maxZoom minX minY maxX maxY");
+				}
+			}
+			else if(args[0].equalsIgnoreCase("remove"))
+			{
+				Log.info("Executing remove command");
+				try
+				{
+					for(WorldObject element: new ArrayList<>(this.getState().getWorld().getWorldObjects()))
+						if(element instanceof Solid)
+							if(((Solid)element).getCollisionBox().collides(new RectangleCollisionBox(null, gui.getPin().getX() - 0.05, gui.getPin().getY() - 0.05, 0.1, 0.1)))
+								this.getState().getWorld().getWorldObjects().remove(element);
+
+				}
+				catch(Exception e)
+				{
+					Log.info("USAGE: remove //at your mouse position");
+				}
+			}
+			else if(args[0].equalsIgnoreCase("add") && args.length >= 2)
+			{
+				Log.info("Executing add command");
+				try
+				{
+					int constructorId = 0;
+					String className = args[1];
+
+					if(className.contains("~") && className.split("~").length == 2)
+					{
+						constructorId = Integer.parseInt(className.split("~")[1]);
+						className = className.split("~")[0];
+					}
+
+					Class<?> objectClass = Class.forName("me.winter.main.adventure.world.object." + className);
+
+					Constructor<?> constructor = objectClass.getConstructors()[constructorId];
+
+					Object[] params = new Object[args.length - 1];
+
+					params[0] = getState().getWorld();
+
+					for(int index = 2; index < args.length; index++)
+					{
+						if(args[index].equalsIgnoreCase("x"))
+							params[index - 1] = gui.getPin().getX();
+
+						else if(args[index].equalsIgnoreCase("y"))
+							params[index - 1] = gui.getPin().getY();
+
+						else if(args[index].equalsIgnoreCase("loc"))
+							params[index - 1] = new Location(gui.getPin(), Direction.RIGHT);
+
+						else if(StringUtil.isInt(args[index]))
+							params[index - 1] = Integer.parseInt(args[index]);
+
+						else if(StringUtil.isDouble(args[index]))
+							params[index - 1] = Double.parseDouble(args[index]);
+
+						else if(StringUtil.isFloat(args[index]))
+							params[index - 1] = Float.parseFloat(args[index]);
+
+						else if(StringUtil.isLong(args[index]))
+							params[index - 1] = Long.parseLong(args[index]);
+
+						else
+							params[index - 1] = args[index];
+					}
+					Object object = constructor.newInstance(params);
+
+					this.getState().getWorld().getWorldObjects().add((WorldObject)object);
+				}
+				catch(Throwable e)
+				{
+					e.printStackTrace();
+				}
+			}

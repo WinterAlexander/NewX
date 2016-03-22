@@ -1,0 +1,9 @@
+{
+	"loading": "Chargement...",
+
+	"menu_play": "Jouer",
+	"menu_exit": "Quitter",
+
+	"adv_gui_unpause": "Revenir au jeu",
+	"adv_gui_exit": "Quitter"
+}

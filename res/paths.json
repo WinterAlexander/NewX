@@ -1,0 +1,84 @@
+{
+  "fonts":
+  {
+    "consola": "consola.ttf",
+    "trebuchet": "trebuc.ttf"
+  },
+
+  "images":
+  {
+    "menu_logo": "menu/logo",
+    "menu_button": "menu/button",
+
+    "gui_chat": "adventure/gui/chat",
+    "gui_mask": "adventure/gui/mask",
+
+    "object_appletree": "adventure/apple_tree",
+    "object_bath": "adventure/bath",
+    "object_bath_front": "adventure/bath_front",
+    "object_box": "adventure/box",
+    "object_grass": "adventure/grass",
+    "object_ice": "adventure/ice",
+    "object_ladder_horizontal": "adventure/ladder1",
+    "object_ladder_vertical": "adventure/ladder2",
+    "object_oldtv": "adventure/old-tv",
+    "object_oldtv_broken": "adventure/old-tv_broken",
+    "object_spikes": "adventure/spikes",
+    "object_spoing": "adventure/spoing",
+    "object_spoing_active": "adventure/spoing_active",
+    "object_taco": "adventure/taco",
+    "object_woodwall": "adventure/woodwall",
+
+    "object_dirt_topleft": "adventure/dirt/grass_up_left.png",
+    "object_dirt_top": "adventure/dirt/grass_up.png",
+    "object_dirt_topright": "adventure/dirt/grass_up_right.png",
+    "object_dirt_left": "adventure/dirt/grass_left.png",
+    "object_dirt_center": "adventure/dirt/dirt.png",
+    "object_dirt_right": "adventure/dirt/grass_right.png",
+    "object_dirt_bottomleft": "adventure/dirt/grass_down_left.png",
+    "object_dirt_bottom": "adventure/dirt/grass_down.png",
+    "object_dirt_bottomright": "adventure/dirt/grass_down_right.png",
+
+    "object_snow_topleft": "adventure/snow/snow_up_left",
+    "object_snow_top": "adventure/snow/snow_up",
+    "object_snow_topright": "adventure/snow/snow_up_right",
+    "object_snow_left": "adventure/snow/snow_left",
+    "object_snow_center": "adventure/snow/snow",
+    "object_snow_right": "adventure/snow/snow_right",
+    "object_snow_bottomleft": "adventure/snow/snow_down_left",
+    "object_snow_bottom": "adventure/snow/snow_down",
+    "object_snow_bottomright": "adventure/snow/snow_down_right",
+
+    "creature_zombie": "adventure/zombie",
+    "creature_player_standby": "adventure/player/standby.png",
+    "creature_player_crouch": "adventure/player/crouch.png",
+    "creature_player_jumping": "adventure/player/jumping.png",
+    "creature_player_running_1": "adventure/player/running_1.png",
+    "creature_player_running_2": "adventure/player/running_2.png",
+
+    "bg_colline": "background/colline",
+    "bg_ferme": "background/ferme",
+    "bg_lac": "background/lac",
+    "bg_montagne": "background/montagne",
+    "bg_plage": "background/plage",
+    "bg_sapins": "background/sapins",
+    "bg_savane": "background/savane",
+    "bg_village": "background/village"
+  },
+
+  "sounds":
+  {
+    "sound_ding": "ding",
+    "sound_dong": "dong",
+    "sound_gameover": "gameover",
+    "sound_victory": "victory",
+    "sound_pickup": "pickup",
+
+    "music_finalbattle": "finalbattle",
+    "music_greenlife": "greenlife",
+    "music_justice": "justice",
+    "music_patience": "patience",
+    "music_windofsilence": "windofsilence",
+    "music_lakeofemptiness": "lakeofemptiness"
+  }
+}
