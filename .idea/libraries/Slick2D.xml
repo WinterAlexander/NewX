@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="Slick2D">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jar/ibxm.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jar/jinput.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jar/jnlp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jar/jogg-0.0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jar/jorbis-0.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jar/lwjgl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jar/lwjgl_util.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jar/lwjgl_util_applet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jar/slick-examples.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jar/slick.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jar/tinylinepp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jar/json-20160212.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/lib/javadoc" />
+      <root url="jar://$PROJECT_DIR$/lib/jar/json-20160212-javadoc.jar!/" />
+      <root url="http://reflections.googlecode.com/svn/trunk/reflections/javadoc/apidocs/index.html?org/reflections/Reflections.html" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/lib/native" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/lib/src" />
+      <root url="file://$PROJECT_DIR$/lib/tools" />
+    </SOURCES>
+  </library>
+</component>
