@@ -1,5 +1,5 @@
 # NewX
-Hi ! Let me introduce you to NewX
+Hi ! Let me introduce you to my NewX java game
 
 NewX is a open-source free game I am doing just for fun. 
 I'm not actively working on the project but if other people 
