@@ -17,7 +17,12 @@ public class Drawer
 		this.state = state;
 		this.g = null;
 	}
-	
+
+	public Graphics getCurrentGraphics()
+	{
+		return g;
+	}
+
 	public void setGraphics(Graphics g)
 	{
 		this.g = g;

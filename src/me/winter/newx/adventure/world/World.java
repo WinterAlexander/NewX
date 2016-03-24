@@ -40,6 +40,17 @@ public class World
 	{
 		return this.objects;
 	}
+
+	public <T extends WorldObject> List<? extends T> getWorldObjects(Class<T> clazz)
+	{
+		List<T> list = new ArrayList<>();
+
+		for(WorldObject object : getWorldObjects())
+			if(clazz.isInstance(object))
+				list.add((T)object);
+
+		return list;
+	}
 	
 	public void render(Drawer d)
 	{

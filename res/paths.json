@@ -13,6 +13,8 @@
     "gui_chat": "adventure/gui/chat",
     "gui_mask": "adventure/gui/mask",
 
+    "mask_blood": "adventure/masks/blood.png",
+
     "object_appletree": "adventure/apple_tree",
     "object_bath": "adventure/bath",
     "object_bath_front": "adventure/bath_front",

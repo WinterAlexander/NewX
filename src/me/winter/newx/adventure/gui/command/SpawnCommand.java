@@ -54,7 +54,7 @@ public class SpawnCommand implements Command
 		}
 
 		int constructorId = 0;
-		String[] classPath = args[0].toLowerCase().split(Pattern.quote("."));
+		String[] classPath = args[0].split(Pattern.quote("."));
 
 		classPath[classPath.length - 1] = StringUtil.capitalize(classPath[classPath.length - 1]);
 
@@ -78,7 +78,7 @@ public class SpawnCommand implements Command
 			objectClass = Class.forName(path);
 			break;
 		}
-		catch(ClassNotFoundException e) {}
+		catch(ClassNotFoundException | NoClassDefFoundError e) {}
 
 		if(objectClass == null)
 		{
