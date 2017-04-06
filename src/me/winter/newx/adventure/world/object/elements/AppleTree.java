@@ -2,7 +2,7 @@ package me.winter.newx.adventure.world.object.elements;
 
 import me.winter.newx.adventure.Drawer;
 import me.winter.newx.adventure.world.object.WorldObject;
-import me.winter.newx.adventure.world.object.proprieties.Visible;
+import me.winter.newx.adventure.world.object.properties.Visible;
 import me.winter.newx.adventure.world.World;
 
 public class AppleTree extends WorldObject implements Visible

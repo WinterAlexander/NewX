@@ -7,8 +7,8 @@ import me.winter.newx.adventure.physics.Vector;
 import me.winter.newx.adventure.physics.collision.*;
 import me.winter.newx.adventure.world.World;
 import me.winter.newx.adventure.world.object.WorldObject;
-import me.winter.newx.adventure.world.object.proprieties.Furniture;
-import me.winter.newx.adventure.world.object.proprieties.Visible;
+import me.winter.newx.adventure.world.object.properties.Furniture;
+import me.winter.newx.adventure.world.object.properties.Visible;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -3,8 +3,8 @@ package me.winter.newx.adventure.world.object.elements;
 import me.winter.newx.adventure.world.World;
 import me.winter.newx.adventure.physics.collision.Limit;
 import me.winter.newx.adventure.world.object.creature.Player;
-import me.winter.newx.adventure.world.object.proprieties.Solid;
-import me.winter.newx.adventure.world.object.proprieties.Touchable;
+import me.winter.newx.adventure.world.object.properties.Solid;
+import me.winter.newx.adventure.world.object.properties.Touchable;
 
 public class FinishPlatform extends Platform implements Touchable
 {
@@ -15,7 +15,7 @@ public class FinishPlatform extends Platform implements Touchable
 	}
 
 	@Override
-	public void onTouch(Solid solid, Limit limit, double power)
+	public void onTouch(Touchable solid, Limit limit)
 	{
 		if(solid instanceof Player);
 			//getWorld().getAdventure().win();

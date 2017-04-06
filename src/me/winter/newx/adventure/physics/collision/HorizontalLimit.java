@@ -39,7 +39,7 @@ public abstract class HorizontalLimit implements Limit
 
 		Vector smallVector = new Vector(vector.getXFromY(this.getY() - limit.getY()), this.getY() - limit.getY());
 
-		return Math.abs(smallVector.getLength() / vector.getLength());
+		return Math.abs(smallVector.getLength() / vector.getLength()); //math.abs useless ?
 	}
 	
 	public double getY()

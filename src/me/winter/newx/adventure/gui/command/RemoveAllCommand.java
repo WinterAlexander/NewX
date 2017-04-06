@@ -3,9 +3,8 @@ package me.winter.newx.adventure.gui.command;
 import me.winter.newx.adventure.gui.Chat;
 import me.winter.newx.adventure.physics.collision.RectangleCollisionBox;
 import me.winter.newx.adventure.world.object.WorldObject;
-import me.winter.newx.adventure.world.object.proprieties.Localizable;
-import me.winter.newx.adventure.world.object.proprieties.Movable;
-import me.winter.newx.adventure.world.object.proprieties.Solid;
+import me.winter.newx.adventure.world.object.properties.Localizable;
+import me.winter.newx.adventure.world.object.properties.Solid;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -9,13 +9,13 @@ import me.winter.newx.adventure.world.object.WorldGravity;
 import me.winter.newx.adventure.world.object.WorldObject;
 import me.winter.newx.adventure.world.object.border.WorldBorder;
 import me.winter.newx.adventure.world.object.creature.Player;
-import me.winter.newx.adventure.world.object.proprieties.Visible;
+import me.winter.newx.adventure.world.object.properties.Visible;
 import me.winter.newx.adventure.physics.Direction;
 import me.winter.newx.adventure.physics.collision.CollisionBox;
 import me.winter.newx.adventure.physics.collision.Limit;
 import me.winter.newx.adventure.physics.collision.TopLimit;
-import me.winter.newx.adventure.world.object.proprieties.Solid;
-import me.winter.newx.adventure.world.object.proprieties.Touchable;
+import me.winter.newx.adventure.world.object.properties.Solid;
+import me.winter.newx.adventure.world.object.properties.Touchable;
 import me.winter.newx.util.SortingUtil;
 import org.newdawn.slick.Color;
 
@@ -168,44 +168,13 @@ public class World
 				{
 					Solid owner = getOwner(limit);
 
-					if(owner instanceof Touchable || solid instanceof Touchable)
-					{
-						double power = 0;
-
-						switch(limit.getBlockDirection())
-						{
-							case UP:
-								power = vector.getY();
-								break;
-
-							case DOWN:
-								power = -vector.getY();
-								break;
-
-							case RIGHT:
-								power = vector.getX();
-								break;
-
-							case LEFT:
-								power = -vector.getX();
-								break;
-						}
-
-						if(power < 0)
-							power = 0;
-
-						if(owner instanceof Touchable)
-							((Touchable)owner).onTouch(solid, limit, power);
-
-						if(solid instanceof Touchable)
-							((Touchable)solid).onTouch(solid, limit, -power);
-					}
+					if(owner instanceof Touchable && solid instanceof Touchable)
+						((Touchable)owner).onTouch(((Touchable)solid), limit);
 
 					vector = limit.replace(vector, boxLimit);
 					vector.round(2);
 				}
 		}
-
 
 		return vector;
 	}

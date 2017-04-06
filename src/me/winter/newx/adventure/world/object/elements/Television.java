@@ -6,9 +6,7 @@ import me.winter.newx.adventure.physics.Location;
 import me.winter.newx.adventure.physics.Vector;
 import me.winter.newx.adventure.physics.collision.Limit;
 import me.winter.newx.adventure.world.World;
-import me.winter.newx.adventure.world.object.proprieties.Furniture;
-import me.winter.newx.adventure.world.object.proprieties.Solid;
-import me.winter.newx.adventure.world.object.proprieties.Visible;
+import me.winter.newx.adventure.world.object.properties.*;
 
 /**
  *
@@ -62,11 +60,11 @@ public class Television extends Rectangle implements Furniture
 	}
 
 	@Override
-	public void onTouch(Solid solid, Limit limit, double power)
+	public void onTouch(Touchable solid, Limit limit)
 	{
-		if(Math.abs(power) > 0.5)
+		if(solid instanceof Body && Math.abs(((Body)solid).getVelocity().getLength()) > 0.5)
 			this.broken = true;
 
-		Furniture.super.onTouch(solid, limit, power);
+		Furniture.super.onTouch(solid, limit);
 	}
 }

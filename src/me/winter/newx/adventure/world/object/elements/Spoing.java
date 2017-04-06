@@ -2,13 +2,13 @@ package me.winter.newx.adventure.world.object.elements;
 
 import me.winter.newx.adventure.world.World;
 import me.winter.newx.adventure.Drawer;
-import me.winter.newx.adventure.world.object.proprieties.Solid;
-import me.winter.newx.adventure.world.object.proprieties.Visible;
-import me.winter.newx.adventure.world.object.proprieties.Movable;
+import me.winter.newx.adventure.world.object.properties.Solid;
+import me.winter.newx.adventure.world.object.properties.Visible;
+import me.winter.newx.adventure.world.object.properties.Movable;
 import me.winter.newx.adventure.physics.Direction;
 import me.winter.newx.adventure.physics.collision.Limit;
 import me.winter.newx.adventure.physics.Vector;
-import me.winter.newx.adventure.world.object.proprieties.Touchable;
+import me.winter.newx.adventure.world.object.properties.Touchable;
 
 public class Spoing extends Square implements Touchable
 {
@@ -36,7 +36,7 @@ public class Spoing extends Square implements Touchable
 	}
 
 	@Override
-	public void onTouch(Solid entity, Limit limit, double power)
+	public void onTouch(Touchable entity, Limit limit)
 	{
 		if(limit.getBlockDirection() == Direction.DOWN)
 		{

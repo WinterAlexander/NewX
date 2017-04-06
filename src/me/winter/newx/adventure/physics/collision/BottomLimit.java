@@ -37,6 +37,12 @@ public class BottomLimit extends HorizontalLimit
 
 	}
 
+	/**
+	 * TODO vector mutable so resulting vector is the param one
+	 * Return a vector for the remaining movement
+	 * In short instead of fixing the vector for it to not collide
+	 * we cut it in 2 to do the real way
+	 */
 	@Override
 	public Vector replace(Vector vector, Limit paramLimit)
 	{

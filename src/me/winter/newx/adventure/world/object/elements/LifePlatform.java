@@ -2,10 +2,10 @@ package me.winter.newx.adventure.world.object.elements;
 
 import me.winter.newx.adventure.world.World;
 import me.winter.newx.adventure.world.object.creature.Creature;
-import me.winter.newx.adventure.world.object.proprieties.Solid;
+import me.winter.newx.adventure.world.object.properties.Solid;
 import me.winter.newx.adventure.Drawer;
 import me.winter.newx.adventure.physics.collision.Limit;
-import me.winter.newx.adventure.world.object.proprieties.Touchable;
+import me.winter.newx.adventure.world.object.properties.Touchable;
 
 public class LifePlatform extends Platform implements Touchable
 {
@@ -27,7 +27,7 @@ public class LifePlatform extends Platform implements Touchable
 	}
 	
 	@Override
-	public void onTouch(Solid entity, Limit limit, double power)
+	public void onTouch(Touchable entity, Limit limit)
 	{
 		if(taken)
 			return;

@@ -3,8 +3,8 @@ package me.winter.newx.adventure.world.object.effects;
 import me.winter.newx.adventure.Drawer;
 import me.winter.newx.adventure.world.World;
 import me.winter.newx.adventure.world.object.WorldObject;
-import me.winter.newx.adventure.world.object.proprieties.Named;
-import me.winter.newx.adventure.world.object.proprieties.Visible;
+import me.winter.newx.adventure.world.object.properties.Named;
+import me.winter.newx.adventure.world.object.properties.Visible;
 
 /**
  *

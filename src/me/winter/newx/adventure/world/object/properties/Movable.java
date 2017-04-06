@@ -1,4 +1,4 @@
-package me.winter.newx.adventure.world.object.proprieties;
+package me.winter.newx.adventure.world.object.properties;
 
 import me.winter.newx.adventure.physics.Location;
 import me.winter.newx.adventure.physics.Vector;

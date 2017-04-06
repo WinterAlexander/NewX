@@ -2,7 +2,7 @@ package me.winter.newx.adventure.world;
 
 import me.winter.newx.Task;
 import me.winter.newx.adventure.world.object.WorldObject;
-import me.winter.newx.adventure.world.object.proprieties.Tickable;
+import me.winter.newx.adventure.world.object.properties.Tickable;
 
 import java.util.ArrayList;
 

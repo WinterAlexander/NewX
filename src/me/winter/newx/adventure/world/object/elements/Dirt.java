@@ -3,7 +3,7 @@ package me.winter.newx.adventure.world.object.elements;
 import me.winter.newx.adventure.world.World;
 import org.newdawn.slick.Image;
 import me.winter.newx.adventure.Drawer;
-import me.winter.newx.adventure.world.object.proprieties.Visible;
+import me.winter.newx.adventure.world.object.properties.Visible;
 
 public class Dirt extends Rectangle
 {

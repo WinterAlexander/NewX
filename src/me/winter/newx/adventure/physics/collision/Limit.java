@@ -10,7 +10,7 @@ public interface Limit
 	double getPriority(Vector vector, Limit limit);
 	Vector replace(Vector vector, Limit limit);
 
-	Direction getBlockDirection();
+	Direction getBlockDirection(); //trash
 	boolean isTouching(Limit limit);
 
 	default boolean isTouching(CollisionBox box)
@@ -26,7 +26,7 @@ public interface Limit
 
 	boolean canSubstitute(Limit limit);
 
-	void round(int decimals);
+	void round(int decimals); //trash
 
 	Location getStart();
 	Location getEnd();

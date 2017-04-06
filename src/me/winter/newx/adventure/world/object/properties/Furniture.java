@@ -1,4 +1,4 @@
-package me.winter.newx.adventure.world.object.proprieties;
+package me.winter.newx.adventure.world.object.properties;
 
 import me.winter.newx.adventure.world.World;
 
@@ -6,7 +6,7 @@ import me.winter.newx.adventure.world.World;
  *
  * Created by winter on 17/02/16.
  */
-public interface Furniture extends GravityAffected, Pushable, Visible
+public interface Furniture extends GravityAffected, Pushable, Visible, Body
 {
 	World getWorld();
 

@@ -2,7 +2,7 @@ package me.winter.newx.adventure.world.object;
 
 import me.winter.newx.adventure.Drawer;
 import me.winter.newx.adventure.world.World;
-import me.winter.newx.adventure.world.object.proprieties.Visible;
+import me.winter.newx.adventure.world.object.properties.Visible;
 
 import java.io.Serializable;
 

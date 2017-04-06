@@ -5,6 +5,10 @@ import me.winter.newx.util.MathUtil;
 import java.io.Serializable;
 import java.util.Collection;
 
+/**
+ * A mutable Vector class
+ *
+ */
 public class Vector implements Serializable
 {
 	private double x;

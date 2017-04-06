@@ -7,8 +7,9 @@ import me.winter.newx.adventure.physics.collision.CollisionBox;
 import me.winter.newx.adventure.physics.collision.Limit;
 import me.winter.newx.adventure.physics.collision.RectangleCollisionBox;
 import me.winter.newx.adventure.world.World;
-import me.winter.newx.adventure.world.object.proprieties.Solid;
-import me.winter.newx.adventure.world.object.proprieties.Visible;
+import me.winter.newx.adventure.world.object.properties.Solid;
+import me.winter.newx.adventure.world.object.properties.Touchable;
+import me.winter.newx.adventure.world.object.properties.Visible;
 import me.winter.newx.adventure.physics.Direction;
 import me.winter.newx.adventure.physics.Location;
 import me.winter.newx.adventure.physics.Vector;
@@ -134,7 +135,7 @@ public class Slime extends Creature
 	}
 
 	@Override
-	public void onTouch(Solid solid, Limit limit, double power)
+	public void onTouch(Touchable solid, Limit limit)
 	{
 
 	}

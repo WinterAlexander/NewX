@@ -9,9 +9,10 @@ import me.winter.newx.adventure.physics.Location;
 import me.winter.newx.adventure.physics.Vector;
 import me.winter.newx.adventure.physics.collision.*;
 import me.winter.newx.adventure.world.object.WorldObject;
-import me.winter.newx.adventure.world.object.proprieties.Furniture;
-import me.winter.newx.adventure.world.object.proprieties.Solid;
-import me.winter.newx.adventure.world.object.proprieties.Visible;
+import me.winter.newx.adventure.world.object.properties.Furniture;
+import me.winter.newx.adventure.world.object.properties.Solid;
+import me.winter.newx.adventure.world.object.properties.Touchable;
+import me.winter.newx.adventure.world.object.properties.Visible;
 import me.winter.newx.adventure.world.World;
 
 public class Bath extends WorldObject implements Furniture
@@ -78,9 +79,9 @@ public class Bath extends WorldObject implements Furniture
 	}
 
 	@Override
-	public void onTouch(Solid solid, Limit limit, double power)
+	public void onTouch(Touchable solid, Limit limit)
 	{
-		Furniture.super.onTouch(solid, limit, power / 4);
+		Furniture.super.onTouch(solid, limit);
 	}
 
 	@Override

@@ -5,13 +5,10 @@ import me.winter.newx.adventure.physics.Vector;
 import me.winter.newx.adventure.world.World;
 import me.winter.newx.adventure.world.object.WorldObject;
 import me.winter.newx.adventure.physics.Direction;
-import me.winter.newx.adventure.world.object.proprieties.Damageable;
-import me.winter.newx.adventure.world.object.proprieties.GravityAffected;
-import me.winter.newx.adventure.world.object.proprieties.Touchable;
-import me.winter.newx.adventure.world.object.proprieties.Visible;
+import me.winter.newx.adventure.world.object.properties.*;
 
 
-public abstract class Creature extends WorldObject implements Visible, Damageable, GravityAffected, Touchable
+public abstract class Creature extends WorldObject implements Visible, Damageable, GravityAffected, Touchable, Body
 {
 	private long sufferingEnd;
 	private double health, maxHealth;
@@ -68,17 +65,12 @@ public abstract class Creature extends WorldObject implements Visible, Damageabl
 
 			previousMovement.setX(previousMovement.getX() * (1 - stability) + movement.getX() * stability);
 			previousMovement.setY(movement.getY());
-
 		}
 		else
-		{
 			previousMovement.setX(previousMovement.getX() * (1 - airStability) + movement.getX() * airStability);
-		}
 
 		if(getWorld().getGravity() != null)
-		{
 			previousMovement.setY(previousMovement.getY() + getWorld().getGravity().getDeltaY());
-		}
 
 		Vector vector = getWorld().getNoCollisionVector(previousMovement.clone(), this, isPenetrating());
 

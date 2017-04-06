@@ -2,17 +2,18 @@ package me.winter.newx.adventure.world.object.creature;
 
 import me.winter.newx.adventure.gui.LifeBar;
 
+import me.winter.newx.adventure.world.object.properties.Touchable;
 import me.winter.newx.config.input.InputAction;
 import me.winter.newx.adventure.physics.collision.CollisionBox;
 import me.winter.newx.adventure.physics.collision.Limit;
 import me.winter.newx.adventure.physics.collision.RectangleCollisionBox;
 import me.winter.newx.adventure.world.World;
-import me.winter.newx.adventure.world.object.proprieties.Solid;
+import me.winter.newx.adventure.world.object.properties.Solid;
 import me.winter.newx.adventure.Drawer;
 import me.winter.newx.adventure.physics.Direction;
 import me.winter.newx.adventure.physics.Location;
 import me.winter.newx.adventure.physics.Vector;
-import me.winter.newx.adventure.world.object.proprieties.Visible;
+import me.winter.newx.adventure.world.object.properties.Visible;
 import org.newdawn.slick.Image;
 
 public class Player extends Creature
@@ -240,7 +241,7 @@ public class Player extends Creature
 	}
 
 	@Override
-	public void onTouch(Solid solid, Limit limit, double power)
+	public void onTouch(Touchable solid, Limit limit)
 	{
 		if(solid instanceof Slime)
 			hit(2, new Vector(((Slime)solid).getLocation(), getLocation()).normalize().multiply(0.5));

@@ -2,8 +2,8 @@ package me.winter.newx.adventure.world.object.elements;
 
 import me.winter.newx.adventure.Drawer;
 import me.winter.newx.adventure.world.object.WorldObject;
-import me.winter.newx.adventure.world.object.proprieties.Tickable;
-import me.winter.newx.adventure.world.object.proprieties.Visible;
+import me.winter.newx.adventure.world.object.properties.Tickable;
+import me.winter.newx.adventure.world.object.properties.Visible;
 
 public class BathFront extends WorldObject implements Visible, Tickable
 {

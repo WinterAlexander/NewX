@@ -7,11 +7,11 @@ import me.winter.newx.adventure.Drawer;
 import me.winter.newx.adventure.physics.Location;
 import me.winter.newx.adventure.physics.collision.CollisionBox;
 import me.winter.newx.adventure.world.object.WorldObject;
-import me.winter.newx.adventure.world.object.proprieties.Localizable;
-import me.winter.newx.adventure.world.object.proprieties.Visible;
+import me.winter.newx.adventure.world.object.properties.Localizable;
+import me.winter.newx.adventure.world.object.properties.Visible;
 import me.winter.newx.adventure.physics.collision.Limit;
 import me.winter.newx.adventure.world.World;
-import me.winter.newx.adventure.world.object.proprieties.Solid;
+import me.winter.newx.adventure.world.object.properties.Solid;
 import me.winter.newx.adventure.physics.collision.TopLimit;
 
 public class Platform extends WorldObject implements Visible, Solid, Localizable
