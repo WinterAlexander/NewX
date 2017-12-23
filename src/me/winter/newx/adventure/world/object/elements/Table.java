@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  *
- * Created by 1541869 on 2016-02-18.
+ * Created by Alexander Winter on 2016-02-18.
  */
 public class Table extends WorldObject implements Furniture
 {

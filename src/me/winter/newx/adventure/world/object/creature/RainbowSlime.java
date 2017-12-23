@@ -8,7 +8,7 @@ import java.util.Random;
 
 /**
  *
- * Created by 1541869 on 2016-02-12.
+ * Created by Alexander Winter on 2016-02-12.
  */
 public class RainbowSlime extends Slime
 {

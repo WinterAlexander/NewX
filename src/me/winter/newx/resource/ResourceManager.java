@@ -7,7 +7,7 @@ import java.awt.*;
 
 /**
  *
- * Created by 1541869 on 2016-02-25.
+ * Created by Alexander Winter on 2016-02-25.
  */
 public interface ResourceManager
 {

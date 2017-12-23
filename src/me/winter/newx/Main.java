@@ -1,11 +1,13 @@
 package me.winter.newx;
 
 import me.winter.newx.util.FileUtil;
+import me.winter.newx.util.SharedLibraryLoader;
 import me.winter.newx.util.StringUtil;
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.util.Log;
 
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import java.io.File;
 
 public class Main
@@ -14,6 +16,7 @@ public class Main
 	{
 		try
 		{
+			SharedLibraryLoader.load();
 			NewX game = new NewX();
 
 			File directory = game.getDataFolder();

@@ -8,7 +8,7 @@ import me.winter.newx.adventure.world.object.proprieties.Visible;
 
 /**
  *
- * Created by 1541869 on 2016-03-24.
+ * Created by Alexander Winter on 2016-03-24.
  */
 public class BloodMask extends WorldObject implements Visible, Named
 {

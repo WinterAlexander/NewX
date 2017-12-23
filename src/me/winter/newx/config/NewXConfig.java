@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  *
- * Created by 1541869 on 2016-02-29.
+ * Created by Alexander Winter on 2016-02-29.
  */
 public class NewXConfig
 {

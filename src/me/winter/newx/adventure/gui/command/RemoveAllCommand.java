@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by 1541869 on 2016-02-22.
+ * Created by Alexander Winter on 2016-02-22.
  */
 public class RemoveAllCommand implements Command
 {

@@ -3,7 +3,7 @@ package me.winter.newx.config.input;
 
 /**
  *
- * Created by 1541869 on 2016-02-08.
+ * Created by Alexander Winter on 2016-02-08.
  */
 public abstract class InputControllerEvent implements InputEvent
 {

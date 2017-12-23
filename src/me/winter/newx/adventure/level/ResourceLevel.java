@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  *
- * Created by 1541869 on 2016-01-25.
+ * Created by Alexander Winter on 2016-01-25.
  */
 public class ResourceLevel extends Level
 {

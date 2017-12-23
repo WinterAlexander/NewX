@@ -1,4 +1,4 @@
-ompiled class file
+Compiled class file
 *.class
 
 # Log file
@@ -25,3 +25,8 @@ out/
 classes/
 lib/
 libs/
+.gradle
+/gradle/
+*.iml
+*.jar
+build/
