@@ -71,7 +71,7 @@ public class SharedLibraryLoader
 	/**
 	 * Extracts the LWJGL native libraries from the classpath and sets the "org.lwjgl.librarypath" system property.
 	 */
-	static public synchronized void load()
+	public static synchronized void load()
 	{
 		load(false);
 	}
@@ -79,7 +79,7 @@ public class SharedLibraryLoader
 	/**
 	 * Extracts the LWJGL native libraries from the classpath and sets the "org.lwjgl.librarypath" system property.
 	 */
-	static public synchronized void load(boolean disableOpenAL)
+	public static synchronized void load(boolean disableOpenAL)
 	{
 		if(!load)
 			return;
@@ -88,19 +88,19 @@ public class SharedLibraryLoader
 		File nativesDir = null;
 		try
 		{
-			if(SharedLibraryLoader.isWindows)
+			if(isWindows)
 			{
 				nativesDir = loader.extractFile(SharedLibraryLoader.is64Bit ? "lwjgl64.dll" : "lwjgl.dll", null).getParentFile();
 				if(!disableOpenAL)
 					loader.extractFile(SharedLibraryLoader.is64Bit ? "OpenAL64.dll" : "OpenAL32.dll", nativesDir.getName());
 			}
-			else if(SharedLibraryLoader.isMac)
+			else if(isMac)
 			{
 				nativesDir = loader.extractFile("liblwjgl.dylib", null).getParentFile();
 				if(!disableOpenAL)
 					loader.extractFile("openal.dylib", nativesDir.getName());
 			}
-			else if(SharedLibraryLoader.isLinux)
+			else if(isLinux)
 			{
 				nativesDir = loader.extractFile(SharedLibraryLoader.is64Bit ? "liblwjgl64.so" : "liblwjgl.so", null).getParentFile();
 				if(!disableOpenAL)
